@@ -1,0 +1,80 @@
+body {
+    margin: 0;
+    background-color: cadetblue;
+}
+
+header {
+    margin: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h2 {
+        font-size: 90%;
+    }
+}
+
+h1 , h2 {
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    position: relative;
+    left: 20%;
+
+    height: 100vh;
+    width: 60%;
+}
+
+section {
+    height: 45%;
+    width: 100%;
+    background-color: skyblue;
+
+}
+
+//---------------------IMPORTANTE-----------------
+
+#cuadrado {
+    height: 50px;
+    width: 50px;
+    background-color: rgb(255, 255, 255);
+
+    position: relative;
+    left: 425px;
+    top: 140px;
+
+}
+
+//----------------------------------------------------
+
+.caja {
+    height: 35%;
+    width: 100%;
+    background-color: #fff;
+
+
+    .controles {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        position: relative;
+        top: 10%;
+    }
+
+    i {
+        height: 40px;
+        width: 80px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
