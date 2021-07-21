@@ -1,0 +1,142 @@
+@import 'colores';
+
+@mixin centrar ($direccion, $content, $items) {
+    display: flex;
+    flex-direction: $direccion;
+    justify-content: $content;
+    align-items: $items;
+}
+
+$escala:(
+    height:100vh,
+    width:100%,
+);
+
+$distancia: (
+    margin:1em
+);
+
+body {
+    margin:map-get($distancia, margin) * 0;
+    height:map-get($escala, height);
+
+    background-color: map-get($color, bg);
+
+    .bgText{
+        position: absolute;
+        z-index: -1;
+        //font-size: 80vh;
+        font-size: map-get($escala, height) * 0.8;
+        top: 0px;
+
+        p{
+            margin: 0;
+            opacity: 0.2;
+            color: map-get($color, texto);
+        }
+    }
+}
+
+.container{
+    display: grid;
+
+    grid-template-areas: 
+    "logo titulo col1 vacio1 menu"
+    "logo titulo col1 vacio1 menu"
+    "vacio2 vacio2 vacio2 col2 parrafo";
+
+    grid-template-columns: 1fr 2fr 2fr 2fr 2fr;
+    grid-template-rows: 1fr 2.5fr 2fr;
+
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+
+}
+
+
+.logo{
+    grid-area: logo;
+
+    i{
+        margin: 0.1em;
+        color: map-get($color, logo);
+    }
+}
+
+.titulo{
+    grid-area: titulo;
+
+    .texto{
+        //height: 50vh;
+        height:map-get($escala, height) * 0.5;
+        width: 100%;
+
+
+        @include centrar(column, center, flex-start);
+
+        h1{
+            margin: 0;
+            color: map-get($color, texto);
+        }
+        h2{
+            margin: 0;
+            color: map-get($color, texto);
+        }
+    }
+}
+
+.col1{
+    grid-area: col1;
+
+    background-color: map-get($color, cuadro1);
+}
+
+.col2{
+    grid-area: col2;
+
+    background-color: map-get($color, cuadro2);
+}
+
+.vacio1{
+    grid-area: vacio1;
+}
+
+.vacio2{
+    grid-area: vacio2;
+}
+
+.menu{
+    grid-area: menu;
+
+    ul{
+      
+        @include centrar(row,center,flex-start);
+
+        border-bottom: 1px solid map-get($color, texto);
+        //border-bottom: 1px solid black;
+
+        li{
+            list-style: none;
+            margin: 1em;
+
+            a{
+                text-decoration: none;
+                color: map-get($color, texto);
+                padding: 1em;
+
+            }
+        }
+    }
+}
+
+.parrafo{
+    grid-area: parrafo;
+
+    @include centrar(column, center, center);
+
+    p{
+        margin: 2em;
+        color: map-get($color, texto);
+    }
+}
