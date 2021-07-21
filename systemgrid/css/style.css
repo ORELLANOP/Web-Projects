@@ -1,0 +1,62 @@
+body{
+    margin: 0;
+    box-sizing: border-box;
+
+    height: 100vh;
+    padding: 25px;
+}
+
+.contenedor{
+
+    display: grid;
+
+    height: 100vh;
+
+    grid-template-rows: 15fr 1fr 1fr 0.5fr;
+
+    grid-template-areas: 
+        "main main main"
+        "card1 card2 card3"
+        "parallax parallax parallax"
+        "vacio1 footer vacio2";
+
+    background-color: black;
+}
+
+main{
+    grid-area: main;
+    background: url(../imagenes/alex-guillaume-3Snp9FlPld0-unsplash.jpg) no-repeat center;
+
+    color: whitesmoke;
+    font-size: 3em;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card1{
+    grid-area: card1;
+    background-color: chartreuse;
+}
+
+.card2{
+    grid-area: card2;
+    background-color: chocolate;
+}
+
+.card3{
+    grid-area: card3;
+    background-color: crimson;
+}
+
+section{
+    grid-area: parallax;
+    background-color: darkblue;
+}
+
+
+footer{
+    grid-area: footer;
+    background-color: darkgoldenrod;
+}
