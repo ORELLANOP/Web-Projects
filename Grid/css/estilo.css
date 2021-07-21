@@ -1,0 +1,164 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+menu ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+menu ul li {
+  list-style: none;
+  padding: 0 10px;
+}
+
+menu ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+main {
+  background-color: orange;
+  font-size: 2em;
+}
+
+article {
+  background-color: orangered;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 1%;
+}
+
+article img {
+  margin: 2em;
+}
+
+.social {
+  color: orange;
+  font-size: 2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 400px) {
+  menu {
+    display: none;
+  }
+  .logo img {
+    width: 35px;
+  }
+  main {
+    position: relative;
+  }
+  main figure {
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+  main .title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    font-size: 0.3em;
+  }
+}
+
+@media (min-width: 401px) {
+  .container {
+    display: -ms-grid;
+    display: grid;
+        grid-template-areas: "logo vacio menu" "main main main" "article1 article2 article3" "vacio1 social vacio2";
+    -ms-grid-rows: 0.2fr 1fr 1fr 0.4fr;
+        grid-template-rows: 0.2fr 1fr 1fr 0.4fr;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+  }
+  .logo {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: logo;
+  }
+  menu {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+    grid-area: menu;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    color: orange;
+  }
+  menu ul li a {
+    color: orange;
+  }
+  main {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-area: main;
+  }
+  .art1 {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    grid-area: article1;
+  }
+  .art2 {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+    grid-area: article2;
+  }
+  .art3 {
+    -ms-grid-row: 3;
+    -ms-grid-column: 3;
+    grid-area: article3;
+  }
+  .social {
+    -ms-grid-row: 4;
+    -ms-grid-column: 2;
+    grid-area: social;
+  }
+}
+/*# sourceMappingURL=estilo.css.map */
